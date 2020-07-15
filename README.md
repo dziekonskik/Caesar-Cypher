@@ -2,20 +2,18 @@
 
 Projekt praktyczny “Szyfr Cezara”
 
+Wprowadzenie:
 
-Wprowadzenie: 
-
-Szyfr Cezara (szyfr przesuwający) to prosta i popularna technika szyfrowania danych.  
+Szyfr Cezara (szyfr przesuwający) to prosta i popularna technika szyfrowania danych.
 Opiera się o przesunięcie liter w Alfabecie (obecnie używa się przesunięcia o 13 liter - ROT13).
 
-Opis zadania: 
+Opis zadania:
 
 Stwórz moduł eksportujący z pomocą ES6 Modules funkcję caesar13. Jako parametr funkcja ta ma
 przyjmować ciąg znaków a następnie zwracać zaszyfrowany zgodnie z ROT13. Wykorzystaj powyższy
 przykład działania aby zweryfikować poprawność Twojej funkcji.
 
-
-Wymagania: 
+Wymagania:
 
 Po ukończeniu, funkcja ma spełniać następujące wymagania:
 
