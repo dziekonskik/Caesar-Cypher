@@ -166,10 +166,33 @@ var input = document.querySelector('.encryptor__input');
 var output = document.querySelector('.encryptor__output');
 var encryptButton = document.querySelector('.encrypt--js');
 var copyButton = document.querySelector('.copy--js');
-encryptButton.addEventListener('click', function () {
-  output.innerHTML = (0, _szyfrcezara.caesar13)(input.value);
+
+function clearOutput() {
+  output.style.opacity = 0;
+  output.innerHTML = '';
+}
+
+function setDisplayForData() {
+  clearOutput();
   output.classList.add('show');
-});
+  setTimeout(function () {
+    output.style.opacity = 1;
+    output.classList.remove('show');
+  }, 700);
+}
+
+function encrypt() {
+  setDisplayForData();
+  output.innerHTML += (0, _szyfrcezara.caesar13)(input.value);
+}
+
+function copyToClipboard() {
+  output.select();
+  document.execCommand('copy');
+}
+
+copyButton.addEventListener('click', copyToClipboard);
+encryptButton.addEventListener('click', encrypt);
 },{"./szyfrcezara.js":"szyfrcezara.js"}],"C:/Users/Seven/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -198,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62888" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51126" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

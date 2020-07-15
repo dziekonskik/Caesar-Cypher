@@ -8,15 +8,21 @@
 
 body {
   font-size: 62.5%;
+  font-family: 'Comfortaa', cursive;
 }
 
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
+  align-items: start;
   justify-items: center;
   height: 100vh;
-  font-family: 'Comfortaa', cursive;
+
+  &__heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    align-self: end;
+  }
 }
 
 .encryptor {
@@ -99,8 +105,8 @@ body {
     margin: 30px auto;
     padding: 20px;
     opacity: 0.7;
-    font-family: 'Comfortaa', cursive;
     letter-spacing: 2px;
+    font-family: inherit;
 
     &:focus {
       outline: none;
@@ -114,20 +120,29 @@ body {
     height: 30vh;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    grid-row: 1 / 2;
-    border: 1px solid white;
     color: white;
     resize: none;
     font-size: 24px;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 2px;
     pointer-events: none;
+    border: none;
+    opacity: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__border {
+    border: 1px solid white;
+    border-radius: 10px;
   }
 
   &__buttons {
     display: flex;
     justify-content: space-around;
+    font-family: inherit;
   }
 
   &__button {
